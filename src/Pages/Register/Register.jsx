@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaRegEyeSlash,FaRegEye  } from "react-icons/fa";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
+
+const { createUser } = useContext(AuthContext);
+console.log(createUser);
   const [resgisterError, setResgisterError] = useState("");
   const [resgisterSuccess, setResgisterSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -10,10 +14,17 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     console.log("form submited");
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    const photo = e.target.photo.value;
+    const form = new FormData(e.currentTarget);
+    console.log(form.get('password'));
+    // const name = e.target.name.value;
+    const name = form.get('name');
+    const email = form.get('email');
+    const password = form.get('password');
+    const photo = form.get('photo');
+
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+    // const photo = e.target.photo.value;
     console.log(name, email, password, photo);
 
     // reset error & success message
@@ -38,11 +49,15 @@ const Register = () => {
       setResgisterError("you password should be one lower character");
       return;
     }
-    
-    
+     
+    createUser(email,password)
+    .then(result =>{
+        console.log(result.user);
+    })
+    .catch(error =>{
+        console.log(error);
+    })
 
-
-        
     }
   
 

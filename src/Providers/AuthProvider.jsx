@@ -1,8 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword,onAuthStateChanged,signInWithEmailAndPassword, signOut } from "firebase/auth";
-import auth from "../firebase/firebase.config";
+
 import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
-// import React from 'react';
+import auth from "../Firebase/Firebase.init";
+import React from 'react';
 export const AuthContext = createContext(null);
 
 
@@ -65,7 +66,8 @@ const AuthProvider = ({children}) => {
         // <div>
             
         // </div>
-        // eslint-disable-next-line react/react-in-jsx-scope
+        
+        
         <AuthContext.Provider value={authInfo}>
             {children}
         </AuthContext.Provider>

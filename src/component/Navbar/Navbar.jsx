@@ -96,7 +96,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-2">
         <Link to="/login"><button className="btn bg-teal-500 text-white hidden lg:block">
-          LogIn
+          Login
         </button></Link>
         <Link to="/register"><button className="btn bg-emerald-500 text-white">Registration</button></Link>
       </div>
