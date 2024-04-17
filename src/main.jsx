@@ -3,14 +3,10 @@ import ReactDOM from "react-dom/client";
 // import App from './App.jsx'
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-// import SortedBook from "./component/SortedBook/SortedBook";
-
-
 import MainLayout from "./component/Layout/MainLayout";
 import Home from "./Pages/Home";
-import BookDetails from "./component/BookDetails/BookDetails";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
-
+import PropertyDetails from "./component/PropertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,26 +18,26 @@ const router = createBrowserRouter([
         index: true,
         element: <Home></Home>,
         loader: () =>
-          // fetch("https://tamannachadni.github.io/book-json-hosting/book.json"),
-          fetch("https://tamannachadni.github.io/properties-json-hosting/properties.json"),
+          
+          fetch(
+            "https://tamannachadni.github.io/properties-json-hosting/properties.json"
+          ),
       },
       {
-        path: "/book/:bookId",
-        element: <BookDetails></BookDetails>,
+        path: "/property/:id",
+        element: <PropertyDetails></PropertyDetails>,
         loader: () =>
-          fetch("https://tamannachadni.github.io/book-json-hosting/book.json"),
+          fetch(
+            "https://tamannachadni.github.io/properties-json-hosting/properties.json"
+          ),
       },
       // {
-      
+
       //   path: "/listed-book",
       //   element: <SortedBook></SortedBook>,
       //   loader: () =>
       //     fetch("https://tamannachadni.github.io/book-json-hosting/book.json"),
       // },
-      
-      
-      
-      
     ],
   },
 ]);

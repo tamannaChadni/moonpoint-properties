@@ -7,13 +7,13 @@ const SingleBook = ({ book }) => {
   const { id, estate_title, segment_name, image, status, area, facilities } = book;
   return (
     <article className="flex flex-col dark:bg-gray-50">
-      <Link to={`/book/${id}`}>
+      
         <img
           alt=""
           className="object-cover w-full h-52 dark:bg-gray-500"
           src={image}
         />
-      </Link>
+      
       <div className="flex flex-col flex-1 p-6">
         <Link to={id}></Link>
         
@@ -38,6 +38,7 @@ const SingleBook = ({ book }) => {
             </span>
             <span className="font-bold text-teal-500 text-xl">{area}</span>
           </div>
+          <Link to={`/property/${id}`}><button className="btn text-white bg-teal-400 ">View property</button></Link>
         </div>
       </div>
     </article>
