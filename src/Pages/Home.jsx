@@ -1,8 +1,6 @@
 import React from "react";
-// import Hero from "../component/Hero/Hero";
-import Books from "../component/Books/Books";
+import Books from "../component/Properties/Properties";
 import Banner from "../component/Banner/Banner";
-// import Footer from "../component/Footer/Footer";
 import Newsletter from "../component/Newsletter/Newsletter";
 import Statistics from "../component/Statistics/Statistics";
 
@@ -13,7 +11,6 @@ const Home = () => {
       <Books></Books>
       <Statistics></Statistics>
       <Newsletter></Newsletter>
-      {/* <Footer></Footer> */}
     </div>
   );
 };

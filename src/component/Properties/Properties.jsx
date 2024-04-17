@@ -1,9 +1,9 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import SingleBook from "../SingleBook/SingleBook";
+import SingleProperty from "../SingleProperty/SingleProperty";
 
-const Books = () => {
-  const books = useLoaderData();
+const Properties = () => {
+  const properties = useLoaderData();
  
   return (
     <div className="container mx-auto mt-4 ">
@@ -16,8 +16,8 @@ const Books = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-            {books.map((book) => (
-              <SingleBook key={book.id} book={book}></SingleBook>
+            {properties.map((property) => (
+              <SingleProperty key={property.id} property={property}></SingleProperty>
             ))}
           </div>
         </div>
@@ -26,4 +26,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default Properties;

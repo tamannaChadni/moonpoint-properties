@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FaDollarSign } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-const SingleBook = ({ book }) => {
-  const { id, estate_title, segment_name, image, status, area, facilities } = book;
+const SingleProperty = ({ property }) => {
+  const { id, estate_title, segment_name, image, status, area, facilities } = property;
   return (
     <article className="flex flex-col dark:bg-gray-50">
       
@@ -45,9 +45,9 @@ const SingleBook = ({ book }) => {
   );
 };
 
-SingleBook.propTypes = {
-  book: PropTypes.object.isRequired,
+SingleProperty.propTypes = {
+  property: PropTypes.object.isRequired,
 };
 
 
-export default SingleBook;
+export default SingleProperty;

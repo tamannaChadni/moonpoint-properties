@@ -31,13 +31,7 @@ const router = createBrowserRouter([
             "https://tamannachadni.github.io/properties-json-hosting/properties.json"
           ),
       },
-      // {
-
-      //   path: "/listed-book",
-      //   element: <SortedBook></SortedBook>,
-      //   loader: () =>
-      //     fetch("https://tamannachadni.github.io/book-json-hosting/book.json"),
-      // },
+      
     ],
   },
 ]);
