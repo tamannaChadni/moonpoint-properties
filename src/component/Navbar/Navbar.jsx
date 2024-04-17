@@ -77,7 +77,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-teal-500 font-bold" : "font-normal"
             }
-            to="/listed-book"
+            to="/update-profile"
           >
            Update Profile
           </NavLink>
@@ -86,7 +86,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-teal-500 font-bold" : "font-normal"
             }
-            to="/page-to-read"
+            to="/user-profile"
           >
             User Profile
           </NavLink>
@@ -95,10 +95,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <button className="btn bg-teal-500 text-white hidden lg:block">
+        <Link to="/login"><button className="btn bg-teal-500 text-white hidden lg:block">
           LogIn
-        </button>
-        <button className="btn bg-emerald-500 text-white">Registration</button>
+        </button></Link>
+        <Link to="/register"><button className="btn bg-emerald-500 text-white">Registration</button></Link>
       </div>
     </div>
   );

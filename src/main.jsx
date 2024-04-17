@@ -7,6 +7,8 @@ import MainLayout from "./component/Layout/MainLayout";
 import Home from "./Pages/Home";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
 import PropertyDetails from "./component/PropertyDetails/PropertyDetails";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +33,14 @@ const router = createBrowserRouter([
             "https://tamannachadni.github.io/properties-json-hosting/properties.json"
           ),
       },
-      
+      {
+        path:"/login",
+        element:<Login></Login>,
+      },
+      {
+        path:"/register",
+        element:<Register></Register>,
+      },
     ],
   },
 ]);
