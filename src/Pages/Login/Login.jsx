@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 
 const Login = () => {
 
+  const {signInUser} = useContext(AuthContext);
+
+  const [loginError, setLoginError] = useState("");
+  const [loginSuccess, setLoginSuccess] = useState("");
+
     const handleLogin = e =>{
         e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
         console.log(email,password);
+
+        setLoginError("");
+        setLoginSuccess("");
+
+
+        signInUser(email,password)
+        .then(result=>{
+          console.log(result);
+        })
+        .catch(error =>{
+          console.log(error);
+        })
     }
 
     return (
@@ -43,6 +62,12 @@ const Login = () => {
         </div>
         <p>If you new here then please, <span className='text-red-400'><Link to="/register">registrate</Link></span> first</p>
       </form>
+      {
+            loginError && <p className=" text-red-600">{loginError}</p>
+        }
+        {
+            loginSuccess && <p className=" text-green-600">{loginSuccess}</p>
+        }
     </div>
   </div>
 </div>

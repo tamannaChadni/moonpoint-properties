@@ -16,15 +16,13 @@ console.log(createUser);
     console.log("form submited");
     const form = new FormData(e.currentTarget);
     console.log(form.get('password'));
-    // const name = e.target.name.value;
+    
     const name = form.get('name');
     const email = form.get('email');
     const password = form.get('password');
     const photo = form.get('photo');
 
-    // const email = e.target.email.value;
-    // const password = e.target.password.value;
-    // const photo = e.target.photo.value;
+    
     console.log(name, email, password, photo);
 
     // reset error & success message
