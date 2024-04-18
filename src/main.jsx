@@ -10,6 +10,7 @@ import PropertyDetails from "./component/PropertyDetails/PropertyDetails";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import AuthProvider from "./Providers/AuthProvider";
+import PrivateRoute from "./component/Route/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        element: <PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
         loader: () =>
           fetch(
             "https://tamannachadni.github.io/properties-json-hosting/properties.json"
