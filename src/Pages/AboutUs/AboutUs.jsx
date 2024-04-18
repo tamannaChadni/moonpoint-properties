@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
     return (
+        
         <div className='container mx-auto my-4 text-center'>
+            <Helmet>
+            <title>MoonPoint Properties | About us</title>
+            </Helmet>
             <h1 className='font-bold text-3xl text-red-400'>Company Profile</h1>
             <p className='mt-2 text-xl font-semibold'>A Tradition of Excellence, Integrity, Knowledge and Service for over 60 years.</p>
             <p className='mt-2'>At Estey Real Estate, you are number one. Whether you are a property owner, tenant, or buyer, we value your business and will provide you with the individual attention and service you deserve. We believe in a strict Code of Ethics. We believe in integrity, commitment to excellence, a professional attitude, and personalized care.</p>

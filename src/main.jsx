@@ -12,6 +12,9 @@ import Register from "./Pages/Register/Register";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoute from "./component/Route/PrivateRoute";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import { HelmetProvider } from "react-helmet-async";
+import UserProfile from "./Pages/UserProfile/UserProfile";
+import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,14 @@ const router = createBrowserRouter([
           ),
       },
       {
+        path:"/user-profile",
+        element:<UserProfile></UserProfile>,
+      },
+      {
+        path:"/update-profile",
+        element:<UpdateProfile></UpdateProfile>,
+      },
+      {
         path:"/about-us",
         element:<PrivateRoute><AboutUs></AboutUs></PrivateRoute>,
       },
@@ -54,9 +65,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
     <RouterProvider router={router}></RouterProvider>
     </AuthProvider>
+    </HelmetProvider>
     {/* <App /> */}
   </React.StrictMode>
 );
