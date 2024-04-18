@@ -6,7 +6,7 @@ import cover3 from "../../assets/cover3.jpg";
 const Banner = () => {
   return (
     <div className="container mx-auto">
-      <div className=" carousel w-full ">
+      <div  data-aos="fade-up" data-aos-duration="1000" className=" carousel w-full">
         <div id="slide1" className="carousel-item relative w-full h-screen"> 
           <img src={cover3} className="w-full  object-fill" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

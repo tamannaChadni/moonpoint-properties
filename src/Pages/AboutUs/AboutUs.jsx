@@ -1,10 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+
 const AboutUs = () => {
     return (
         
-        <div className='container mx-auto my-4 text-center'>
+        <div  className='container mx-auto my-4 text-center animate__animated animate__bounce'>
             <Helmet>
             <title>MoonPoint Properties | About us</title>
             </Helmet>

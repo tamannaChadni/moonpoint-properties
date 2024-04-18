@@ -7,6 +7,7 @@ const Register = () => {
 
 const { createUser } = useContext(AuthContext);
 console.log(createUser);
+
   const [resgisterError, setResgisterError] = useState("");
   const [resgisterSuccess, setResgisterSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);

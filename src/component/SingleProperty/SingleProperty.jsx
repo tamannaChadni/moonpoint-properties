@@ -8,7 +8,7 @@ const SingleProperty = ({ property }) => {
   return (
     <article className="flex flex-col dark:bg-gray-50">
       
-        <img
+        <img data-aos="fade-left"
           alt=""
           className="object-cover w-full h-52 dark:bg-gray-500"
           src={image}
@@ -17,7 +17,7 @@ const SingleProperty = ({ property }) => {
       <div className="flex flex-col flex-1 p-6">
         <Link to={id}></Link>
         
-        <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+        <h3 data-aos="fade-right" className="flex-1 py-2 text-lg font-semibold leading-snug">
           {estate_title}
         </h3>
         <p className="text-green-300 font-semibold text-xl"> {segment_name}</p>
@@ -38,7 +38,7 @@ const SingleProperty = ({ property }) => {
             </span>
             <span className="font-bold text-teal-500 text-xl">{area}</span>
           </div>
-          <Link to={`/property/${id}`}><button className="btn text-white bg-teal-400 ">View property</button></Link>
+          <Link to={`/property/${id}`}><button  data-aos="flip-up" className="btn text-white bg-teal-400 ">View property</button></Link>
         </div>
       </div>
     </article>
