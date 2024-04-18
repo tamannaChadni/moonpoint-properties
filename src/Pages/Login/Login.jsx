@@ -5,7 +5,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
 
-  const {signInUser} = useContext(AuthContext);
+  const {signInUser,signInWithGoogle} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -32,7 +32,20 @@ const Login = () => {
         .catch(error =>{
           console.log(error);
         })
+       
     }
+
+    const handleGoogleSignIn = () =>{
+      signInWithGoogle()
+      .then(result =>{
+        console.log(result);
+      })
+      .catch(error =>{
+        console.log(error);
+      })
+    }
+
+    
 
     return (
         <div className='container mx-auto'>
@@ -58,7 +71,7 @@ const Login = () => {
           
         </div>
         <div className=' space-x-5'>
-            <button className='btn bg-teal-300 text-white'>Google Login</button>
+            <button onClick={handleGoogleSignIn} className='btn bg-teal-300 text-white'>Google Login</button>
             <button className='btn bg-teal-300 text-white'>GitHub Login</button>
         </div>
         <div className="form-control mt-6">
