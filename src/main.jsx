@@ -11,6 +11,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoute from "./component/Route/PrivateRoute";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           fetch(
             "https://tamannachadni.github.io/properties-json-hosting/properties.json"
           ),
+      },
+      {
+        path:"/about-us",
+        element:<PrivateRoute><AboutUs></AboutUs></PrivateRoute>,
       },
       {
         path:"/login",

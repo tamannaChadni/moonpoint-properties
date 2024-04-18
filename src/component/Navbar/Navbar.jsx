@@ -104,6 +104,14 @@ const Navbar = () => {
           >
             User Profile
           </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-teal-500 font-bold" : "font-normal"
+            }
+            to="/about-us"
+          >
+            About us
+          </NavLink>
           
           
         </ul>
