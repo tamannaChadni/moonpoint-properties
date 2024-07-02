@@ -48,14 +48,14 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 isActive ? "text-teal-500 font-bold" : "font-normal"
               }
               to="/listed-book"
             >
               Update Profile
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className={({ isActive }) =>
                 isActive ? "text-teal-500 font-bold" : "font-normal"
@@ -87,14 +87,14 @@ const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             className={({ isActive }) =>
               isActive ? "text-teal-500 font-bold" : "font-normal"
             }
             to="/update-profile"
           >
            Update Profile
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             className={({ isActive }) =>
